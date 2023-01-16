@@ -7,14 +7,14 @@ public class Driver<T extends Transport & Competing> {
     private final String fio;
     private final String license;
     private final int exp;
-    private final T CAR;
+    private final T Car;
 
 
     public Driver(String fio, String license, int exp, T car) {
         this.fio = fio;
         this.license = license;
         this.exp = exp;
-        this.CAR = car;
+        this.Car = car;
     }
 
     public void move() {
@@ -22,7 +22,7 @@ public class Driver<T extends Transport & Competing> {
     }
 
     public void drive() {
-        System.out.println("Driver driving " + CAR.getBrand());
+        System.out.println("Driver driving " + Car.getBrand());
     }
 
     public void startMoving() {
@@ -52,7 +52,7 @@ public class Driver<T extends Transport & Competing> {
     @Override
     public String toString() {
         return "Водитель " + getFio()
-                + "\n управляет автомобилем " + CAR.getBrand() + CAR.getModel()
+                + "\n управляет автомобилем " + Car.getBrand() + Car.getModel()
                 + "\n лицензия " + getLicense()
                 + "\n стаж" + getExp()
                 + "\n будет участвовать в заезде ";
